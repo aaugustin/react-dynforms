@@ -1,0 +1,16 @@
+{
+    "plugins": [
+        "lodash",
+        "transform-class-properties",
+        "transform-export-extensions"
+    ],
+    "presets": [
+        "es2015",
+        "react"
+    ],
+    "env": {
+        "test": {
+            "plugins": ["istanbul"]
+        }
+    }
+}

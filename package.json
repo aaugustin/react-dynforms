@@ -1,0 +1,66 @@
+{
+  "name": "react-dynforms",
+  "version": "1.0.0",
+  "description": "Dynamic forms framework for React",
+  "main": "lib/index",
+  "scripts": {
+    "build": "NODE_ENV=production node_modules/.bin/babel src -d lib",
+    "coverage": "node_modules/.bin/nyc --extension .jsx --reporter html npm test",
+    "lint": "node_modules/.bin/eslint --ext .js,.jsx src",
+    "pretest": "npm run lint",
+    "prepublish": "npm run build",
+    "test": "NODE_ENV=test mocha --compilers js:babel-register,jsx:babel-register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaugustin/react-dynforms.git"
+  },
+  "keywords": [
+    "react",
+    "forms"
+  ],
+  "author": "Aymeric Augustin",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/aaugustin/react-dynforms/issues"
+  },
+  "files": [
+    "lib",
+    "LICENSE",
+    "README.md"
+  ],
+  "homepage": "https://github.com/aaugustin/react-dynforms#readme",
+  "devDependencies": {
+    "babel-cli": "6.18.0",
+    "babel-eslint": "7.1.0",
+    "babel-plugin-istanbul": "2.0.3",
+    "babel-plugin-lodash": "3.2.9",
+    "babel-plugin-transform-class-properties": "6.18.0",
+    "babel-plugin-transform-export-extensions": "6.8.0",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-react": "6.16.0",
+    "babel-register": "6.18.0",
+    "chai": "3.5.0",
+    "enzyme": "2.5.1",
+    "eslint": "3.9.1",
+    "eslint-config-standard": "6.2.1",
+    "eslint-config-standard-react": "4.2.0",
+    "eslint-plugin-babel": "3.3.0",
+    "eslint-plugin-promise": "3.3.1",
+    "eslint-plugin-react": "6.5.0",
+    "eslint-plugin-standard": "2.0.1",
+    "mocha": "3.1.2",
+    "nyc": "8.4.0",
+    "react-addons-test-utils": ">=15.0.0",
+    "sinon": "1.17.6"
+  },
+  "dependencies": {
+    "lodash": ">=4.0.0",
+    "react": ">=15.0.0",
+    "react-dom": ">=15.0.0"
+  },
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false
+  }
+}
